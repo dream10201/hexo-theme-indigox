@@ -519,6 +519,7 @@
   * SOURCE
   */
 .scene3d {
+  overflow:hidden;
   pointer-events: none;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
