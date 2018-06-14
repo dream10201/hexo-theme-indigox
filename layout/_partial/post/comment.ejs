@@ -1,0 +1,20 @@
+<% if(post.comments){ %>
+<% if(theme.comments){ %>
+<section class="comments" id="comments">
+<div id="container"></div>
+<link rel="stylesheet" href="/static/css/gitment.css">
+<script src="/static/js/min/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '<%- post.slug %>',
+  owner: 'xizirumeng',
+  repo: 'Life-s-Dream',
+  oauth: {
+    client_id: '6184e1d1faa77c439c6b',
+    client_secret: '1a1c29e7a68586f1761876fad6ec773d8b9540c0',
+  },
+})
+gitment.render('container');
+</script>
+<%} %>
+<%} %>

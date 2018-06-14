@@ -1,0 +1,23 @@
+<%if(theme.music){%>
+<audio id="backgroundmusic"></audio>
+<script type="text/javascript">
+var backgroundmusic=document.getElementById("backgroundmusic");
+//var musicTime=localStorage.backgroundmusic;
+//var t = new Date();
+function playMusic(){
+	backgroundmusic.src = "<%=theme.music%>";
+	//localStorage.backgroundmusic = t.getTime();
+	backgroundmusic.autoplay = "autoplay";
+}
+if(window.location.href == "https://bidd.net/"){
+	playMusic();
+}
+//if(typeof(musicTime)!="undefined"){
+//	if((t.getTime() - musicTime)>3600000){
+//		playMusic();
+//	}
+//}else{
+//	playMusic();
+//}
+</script>
+<%}%>
